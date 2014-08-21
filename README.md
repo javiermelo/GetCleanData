@@ -28,7 +28,7 @@ README.md:  This file with instructions, explanation of process and analysis fil
 
 ###How to run the script
 
-1.  Download the compressed dataset from the link metioned above and unzip the file in the "./data" directory under your working directory. The structure of directories must be kept to allow the script to find  the files. If files are not found, error messages are displayed.
+1.  Download the compressed dataset from the link mentioned above and unzip the file in your working directory. The structure of directories must be kept to allow the script to find  the files. If files are not found, error messages are displayed.
 
 2.  Run in R under your working directory: 
    ```
@@ -40,9 +40,9 @@ README.md:  This file with instructions, explanation of process and analysis fil
 
 ###How to read the file
 
-Use in R: 
+Use R Console: 
    ```
-   > mytidy <- read.table("./data/XttWide.txt", header=TRUE, as.is=TRUE)
+   > mytidy <- read.table("XttWide.txt", header=TRUE, as.is=TRUE)
    ```
 
 ###run_analysis.R Explained

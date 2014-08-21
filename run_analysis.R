@@ -10,46 +10,46 @@
 ## Data Source:
 ## https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles
 ##         %2FUCI%20HAR%20Dataset.zip
-## It is assumed that the zip file was unpacked into "data" directory
-## which is under working directory
+## It is assumed that the zip file was unpacked into working directory
+## 
 
 ## verify existence of files in the right directory
-fileFeatures <- "./data/UCI HAR Dataset/features.txt"
+fileFeatures <- "./UCI HAR Dataset/features.txt"
 if(!file.exists(fileFeatures)){
         stop(paste("Required file does not exist:",
                    fileFeatures), call.= FALSE)
 }
-fileActLabels <- "./data/UCI HAR Dataset/activity_labels.txt"
+fileActLabels <- "./UCI HAR Dataset/activity_labels.txt"
 if(!file.exists(fileActLabels)){
         stop(paste("Required file does not exist: ",
                    fileActLabels), call.= FALSE)
 }
-fileSubjectTrain <- "./data/UCI HAR Dataset/train/subject_train.txt"
+fileSubjectTrain <- "./UCI HAR Dataset/train/subject_train.txt"
 if(!file.exists(fileSubjectTrain)){
         stop(paste("Required file does not exist: ",
                    fileSubjectTrain), call.= FALSE)
 }
-fileSubjectTest <- "./data/UCI HAR Dataset/test/subject_test.txt"
+fileSubjectTest <- "./UCI HAR Dataset/test/subject_test.txt"
 if(!file.exists(fileSubjectTest)){
         stop(paste("Required file does not exist: ",
                    fileSubjectTest), call.= FALSE)
 }
-fileXtrain <- "./data/UCI HAR Dataset/train/X_train.txt"
+fileXtrain <- "./UCI HAR Dataset/train/X_train.txt"
 if(!file.exists(fileXtrain)){
         stop(paste("Required file does not exist: ",
                    fileXtrain), call.= FALSE)
 }
-fileYtrain <- "./data/UCI HAR Dataset/train/y_train.txt"
+fileYtrain <- "./UCI HAR Dataset/train/y_train.txt"
 if(!file.exists(fileYtrain)){
         stop(paste("Required file does not exist: ",
                    fileYtrain), call.= FALSE)
 }
-fileXtest <- "./data/UCI HAR Dataset/test/X_test.txt"
+fileXtest <- "./UCI HAR Dataset/test/X_test.txt"
 if(!file.exists(fileXtest)){
         stop(paste("Required file does not exist: ",
                    fileXtest), call.= FALSE)
 }
-fileYtest <- "./data/UCI HAR Dataset/test/y_test.txt"
+fileYtest <- "./UCI HAR Dataset/test/y_test.txt"
 if(!file.exists(fileYtest)){
         stop(paste("Required file does not exist: ",
                    fileYtest), call.= FALSE)
@@ -131,5 +131,5 @@ Xtt <- melt(Xtt,id=c("activity", "subjectId"),
 ## cast to summarize with mean accross the features in variable
 XttWide <- dcast(Xtt,activity+subjectId~variable, mean)
 ## write the table into a file without row names and default separator
-write.table(XttWide,"./data/Xttwide.txt",row.names=FALSE)
+write.table(XttWide,"Xttwide.txt",row.names=FALSE)
 
