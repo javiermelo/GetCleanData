@@ -108,7 +108,7 @@ It will be listed below the 5 major steps as specified in the project instructio
       variables <- gsub("mean","Mean", variables)
       variables <- gsub("std","Std", variables)
       setnames(Xtt, variables)
-     ```
+      ```
 5.  Creates a second, independent tidy data set with the average of each variable for each activity and each subject 
    1.  Using functionality of reshape2 package, we melt the data frame  into a narrow dataset without any summary across the variables by activity and subjectId.  It was followed here the order given in the instructions "for each activity and each subject".  Note also that as.is is used to keep the data types unmodified.
       ```
